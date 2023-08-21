@@ -3,6 +3,7 @@ import { AppContext } from "../context/AppContext"
 import ExpenseItem from "./ExpenseItem"
 
 export default function ExpenseList() {
+    
     const { expenses } = useContext(AppContext)
 
     return (

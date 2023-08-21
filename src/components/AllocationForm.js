@@ -1,10 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
+
+
 const AllocationForm = (props) => {
+
     const { dispatch, remaining } = useContext(AppContext);
+
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+
     const submitEvent = () => {
         if (cost > remaining) {
             alert("The value cannot exceed remaining funds  £" + remaining);
@@ -15,6 +20,7 @@ const AllocationForm = (props) => {
             name: name,
             cost: parseInt(cost),
         };
+        
         if (action === "Reduce") {
             dispatch({
                 type: 'RED_EXPENSE',
@@ -27,6 +33,7 @@ const AllocationForm = (props) => {
             });
         }
     };
+
     return (
         <div>
             <div className='row'>

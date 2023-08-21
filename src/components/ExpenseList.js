@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext"
 import ExpenseItem from "./ExpenseItem"
 
 export default function ExpenseList() {
-    
+
     const { expenses } = useContext(AppContext)
 
     return (
@@ -13,6 +13,7 @@ export default function ExpenseList() {
                     <th scope="col">Department</th>
                     <th scope="col">Allocated Budget</th>
                     <th scope="col">Increase by 10</th>
+                    <th scope="col">Decrease by 10</th>
                     <th scope="col">Delete</th>
                 </tr>
             </thead>
